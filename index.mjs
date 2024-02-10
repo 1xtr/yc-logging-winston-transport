@@ -10,6 +10,7 @@ import { YCLogClient } from '@1xtr/yc-log-client'
  * @property {string | undefined} [streamName=undefined] streamName
  * @property {string | undefined} [resourceType=undefined] resourceType
  * @property {string | undefined} [resourceId=undefined] resourceId
+ * @property {string | undefined} [tokenUrl=undefined] Custom url for get token
  */
 
 export class YCLoggingTransport extends Transport {
@@ -29,7 +30,7 @@ export class YCLoggingTransport extends Transport {
     this.resourceType = opts.resourceType
     this.resourceId = opts.resourceId
 
-    this.YCLogger = new YCLogClient()
+    this.YCLogger = opts.tokenUrl ? new YCLogClient(opts.tokenUrl) : new YCLogClient()
   }
 
   async log(info, callback) {
