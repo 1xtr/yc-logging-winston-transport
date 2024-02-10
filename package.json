@@ -1,6 +1,6 @@
 {
   "name": "yc-logging-winston-transport",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Winston transport for Yandex Cloud Logging",
   "main": "index.js",
   "module": "index.mjs",
