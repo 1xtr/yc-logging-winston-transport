@@ -1,0 +1,67 @@
+{
+  "name": "yc-logging-winston-transport",
+  "version": "1.0.0",
+  "description": "Winston transport for Yandex Cloud Logging",
+  "main": "index.js",
+  "module": "index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "prettier": "prettier --write index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1xtr/yc-logging-winston-transport.git"
+  },
+  "keywords": [
+    "winston",
+    "yandex-cloud",
+    "yandex",
+    "logging",
+    "transport"
+  ],
+  "author": "Aleksei Anisimov <i@1xtr.dev>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/1xtr/yc-logging-winston-transport/issues"
+  },
+  "homepage": "https://github.com/1xtr/yc-logging-winston-transport#readme",
+  "dependencies": {
+    "@1xtr/yc-log-client": "1.1.0",
+    "pb-util": "1.0.3",
+    "triple-beam": "1.4.1",
+    "winston-transport": "4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.17",
+    "eslint": "8.56.0",
+    "prettier": "3.2.5"
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2021
+    }
+  }
+}
